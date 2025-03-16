@@ -1,0 +1,169 @@
+.reserve {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.418);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rContainer {
+  background-color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.rClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.rItem {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.rInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rTitle {
+  font-weight: 500;
+}
+
+.rDesc {
+  font-weight: 300;
+}
+
+.rMax {
+  font-size: 12px;
+}
+
+.rPrice {
+  font-weight: 500;
+}
+
+.rSelectRooms{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 8px;
+  color: gray;
+}
+
+.room{
+  display: flex;
+  flex-direction: column;
+}
+
+.rButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.logcol{
+color:  #48a0c2;
+font-size: 23px;
+}
+
+
+.booking{
+  width: 150px;
+  height: 105px;
+  margin:10px;
+  align-items: center;
+}
+
+.sethed{
+  font-weight: 900;
+  font-size: larger;
+  color: gray;
+  padding-left: 10px;
+}
+
+p.setGST{
+  align-items: center;
+  margin-left: 50%;
+  color: rgb(11, 175, 11);
+  
+}
+
+.ms-3{
+  margin-left: 70px !important;
+}
+
+
+.companylo{
+  color: #48a0c2;
+  align-items: start;
+}
+ul li {
+  list-style: none !important;
+}
+.setno{
+  margin: 0px auto;
+  
+  
+}
+.imgse{
+  width: 50%;
+}
+.bord{
+  border: red !important; 
+  margin-top: 30px !important;
+}
+
+.bord:hover{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+.hotname{
+  margin: 0px auto;
+  color: #48a0c2;
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 45%;
+}
+
+.setimg{
+  margin:  0px auto !important;
+}
+.setex{
+padding-top: 5%;
+color:  #48a0c2;
+}
+
+.handlebutton{
+  color: white;
+  margin-left: 80%;
+  background-color: #48a0c2;
+}
+
+
+.notes 
+{
+  font-size: 11px !important;
+  list-style-type: square !important;
+}
+
+strong{
+  color: rgb(72, 72, 72);
+  font-size: 14px;
+}

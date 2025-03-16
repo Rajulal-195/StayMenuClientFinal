@@ -1,0 +1,96 @@
+:root{
+  --primary-color:   #48a0c6;;
+}
+
+
+.login {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.log {
+  padding-left: 25% !important;
+}
+
+.lButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lButton:disabled {
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+.username {
+  text-transform: uppercase;
+
+}
+
+.profil {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 70px auto !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.ingset {
+  border-radius: 2%;
+
+}
+
+.setedit {
+  margin-top: 10px;
+  margin-left: 85%;
+  color: gray;
+  font-size: 30px;
+
+}
+
+.swal2-timerProgressBar {
+  color: orange;
+  height: 5px;
+}
+
+.form-control {
+  background-color: rgb(251, 251, 251);
+}
+
+.userbackground {
+  padding: 0px, 10%;
+
+}
+
+.signmain {
+  padding: 10%;
+  padding-top: 20px;
+  margin: 0 auto;
+  /* border: 1px solid lightgray; */
+  /* box-shadow: 2px 2px 20px 2px gray; */
+}
+
+.setsign{
+  
+  color:  #48a0c6;;
+}
+.sethr{
+  width: 300px;
+  margin: 0px auto;
+}
+.ses{
+  padding-left: 48.8%;
+}

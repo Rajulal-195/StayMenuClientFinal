@@ -1,0 +1,154 @@
+.searchItem {
+  border: 1px solid lightgray;
+  padding: 10px;
+  
+  border-radius: 5px;
+  display: inline-flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px;
+  max-width: 280px;
+  overflow-x: scroll;
+}
+
+.siImg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.siDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 2;
+}
+
+.siTitle {
+  font-size: 20px;
+  color: #0071c2;
+}
+
+.siDistance {
+  font-size: 12px;
+}
+
+.siTaxiOp {
+  font-size: 12px;
+  background-color: #008009;
+  color: white;
+  width: max-content;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.siSubtitle{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.siFeatures{
+  font-size: 12px;
+}
+
+.siCancelOp{
+  font-size: 12px;
+  color: #008009;
+  font-weight: bold;
+}
+
+.siCancelOpSubtitle{
+  font-size: 12px;
+  color: #008009;
+}
+
+.siDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.siRating{
+  display: flex;
+  justify-content: space-between
+}
+
+.siRating>span{
+  font-weight: 500;
+}
+.siRating>button{
+ background-color: #003580;
+ color: white;
+ padding: 5px;
+ font-weight: bold;
+ border: none;
+}
+
+.siDetailTexts{
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.siPrice{
+  font-size: 24px;
+}
+
+.siTaxOp{
+  font-size: 12px;
+  color: gray;
+}
+
+.siCheckButton{
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  padding: 10px 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: auto;
+}
+
+
+.card {
+  width: 32%;
+  display: inline-block;
+  margin: 5px ;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  
+  min-width:  284px !important;
+}
+h5{
+  color:  #0071c2;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card:hover {
+  border: 1px solid rgb(241, 218, 229);
+  background-color: rgb(252, 252, 252);
+  box-shadow: 0px 0px 10px 1px  #48a0c6;
+
+}
+
+.card img {
+  border-bottom: 1px dashed rgb(205, 195, 200);
+  border-radius: 5px;
+}
+
+.card button {
+  color: white;
+  background:  #0071c2;
+  width: 80%;
+  margin: auto;
+  border: none;
+
+}
+
