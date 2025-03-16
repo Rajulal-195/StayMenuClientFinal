@@ -3,7 +3,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    "/hotels/countByCity?"
+    "https://stayback1.onrender.com/api/hotels/countByCity?"
   );
 
   console.log("data by city ",data)

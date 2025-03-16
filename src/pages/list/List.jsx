@@ -18,7 +18,7 @@ const List = () => {
   const [max, setMax] = useState(undefined);
 
   const { data, loading, error, reFetch } = useFetch(
-    `http://localhost:8800/api/hotels?city=${destination}&min=${min || 0}&max=${max || 999999}`
+    `https://stayback1.onrender.com/api/hotels?city=${destination}&min=${min || 0}&max=${max || 999999}`
   );
   const handleClick = () => {
     reFetch();
