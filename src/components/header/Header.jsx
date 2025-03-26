@@ -37,6 +37,7 @@ const Header = ({ type }) => {
   const { dispatch } = useContext(SearchContext);
   const navigate = useNavigate();
 
+
   useEffect(() => {
     const getCities = async () => {
       try {
@@ -95,112 +96,112 @@ const Header = ({ type }) => {
   };
 
   return (
-   
 
-      <div className="container my-5 p-3  setsec align-item-center">
-        <div className="row setbro">
-        
-          <div className="col-lg-4">
-            <div className="row">
-              <p className="setcity">City, Property Name, Location</p>
-              <input
-                className="setinput"
-                onClick={() => setOpenDate(false)}
-                type="text"
-                value={query}
-                onChange={handleInputChange}
-                onKeyDown={handleKeyDown}
-                placeholder="Where do you want to stay?"
+
+    <div className="container my-5 p-3  setsec align-item-center">
+      <div className="row setbro">
+
+        <div className="col-lg-4">
+          <div className="row">
+            <p className="setcity">City, Property Name, Location</p>
+            <input
+              className="setinput"
+              onClick={() => setOpenDate(false)}
+              type="text"
+              value={query}
+              onChange={handleInputChange}
+              onKeyDown={handleKeyDown}
+              placeholder="Where do you want to stay?"
+            />
+          </div>
+        </div>
+
+        {/* Date range */}
+        <div className="col-lg-4">
+          <div className="row">
+            <p className="setcity">Check-in | Check-Out</p>
+            <span
+              onClick={() => setOpenDate(!openDate)}
+              className="headerSearchText"
+            >
+              {`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(dates[0].endDate, "MM/dd/yyyy")}`}
+            </span>
+            {openDate && (
+              <DateRange
+                editableDateInputs
+                onChange={(item) => setDates([item.selection])}
+                moveRangeOnFirstSelection={false}
+                ranges={dates}
+                className="date"
+                minDate={new Date()}
               />
-            </div>
+            )}
           </div>
+        </div>
 
-          {/* Date range */}
-          <div className="col-lg-4">
-            <div className="row">
-              <p className="setcity">Check-in | Check-Out</p>
-              <span
-                onClick={() => setOpenDate(!openDate)}
-                className="headerSearchText"
-              >
-                {`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(dates[0].endDate, "MM/dd/yyyy")}`}
-              </span>
-              {openDate && (
-                <DateRange
-                  editableDateInputs
-                  onChange={(item) => setDates([item.selection])}
-                  moveRangeOnFirstSelection={false}
-                  ranges={dates}
-                  className="date"
-                  minDate={new Date()}
-                />
-              )}
-            </div>
-          </div>
-
-          {/* Options (Adults, Children, Rooms) */}
-          <div className="col-lg-4">
-            <div className="row">
-              <p className="setcity">Rooms & Guests</p>
-              <span
-                onClick={() => setOpenOptions(!openOptions)}
-                className="headerSearchText"
-              >
-                {`${options.adult} adult · ${options.children} children · ${options.room} room`}
-              </span>
-              {openOptions && (
-                <div className="options">
-                  {['adult', 'children', 'room'].map((item) => (
-                    <div className="optionItem" key={item}>
-                      <span className="optionText">{item.charAt(0).toUpperCase() + item.slice(1)}</span>
-                      <div className="optionCounter">
-                        <button
-                          disabled={options[item] <= 1}
-                          className="optionCounterButton"
-                          onClick={() => handleOptionChange(item, "d")}
-                        >
-                          -
-                        </button>
-                        <span className="optionCounterNumber">{options[item]}</span>
-                        <button
-                          className="optionCounterButton"
-                          onClick={() => handleOptionChange(item, "i")}
-                        >
-                          +
-                        </button>
-                      </div>
+        {/* Options (Adults, Children, Rooms) */}
+        <div className="col-lg-4">
+          <div className="row">
+            <p className="setcity">Rooms & Guests</p>
+            <span
+              onClick={() => setOpenOptions(!openOptions)}
+              className="headerSearchText"
+            >
+              {`${options.adult} adult · ${options.children} children · ${options.room} room`}
+            </span>
+            {openOptions && (
+              <div className="options">
+                {['adult', 'children', 'room'].map((item) => (
+                  <div className="optionItem" key={item}>
+                    <span className="optionText">{item.charAt(0).toUpperCase() + item.slice(1)}</span>
+                    <div className="optionCounter">
+                      <button
+                        disabled={options[item] <= 1}
+                        className="optionCounterButton"
+                        onClick={() => handleOptionChange(item, "d")}
+                      >
+                        -
+                      </button>
+                      <span className="optionCounterNumber">{options[item]}</span>
+                      <button
+                        className="optionCounterButton"
+                        onClick={() => handleOptionChange(item, "i")}
+                      >
+                        +
+                      </button>
                     </div>
-                  ))}
-                </div>
-              )}
-            </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-        </div>
-
-        {/* Search Button */}
-        <div className="row ">
-          <button className="headerBtn " onClick={handleSearch}>
-            Search
-          </button>
-        </div>
-
-        {/* Suggestions List */}
-        <div className="setsuggestion">
-          {showSuggestions && filteredSuggestions.length > 0 && (
-            <ul>
-              {filteredSuggestions.map((suggestion, index) => (
-                <li
-                  key={index}
-                  onClick={() => handleSelectSuggestion(suggestion)}
-                  className={index === activeSuggestionIndex ? 'active' : ''}
-                >
-                  {suggestion}
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
       </div>
+
+      {/* Search Button */}
+      <div className="row ">
+        <button className="headerBtn " onClick={handleSearch}>
+          Search
+        </button>
+      </div>
+
+      {/* Suggestions List */}
+      <div className="setsuggestion">
+        {showSuggestions && filteredSuggestions.length > 0 && (
+          <ul>
+            {filteredSuggestions.map((suggestion, index) => (
+              <li
+                key={index}
+                onClick={() => handleSelectSuggestion(suggestion)}
+                className={index === activeSuggestionIndex ? 'active' : ''}
+              >
+                {suggestion}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
 
   );
 };

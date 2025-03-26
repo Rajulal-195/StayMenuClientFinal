@@ -7,7 +7,7 @@ const SearchItem = ({ item }) => {
       <img src={item.photos[0]} className="card-img-top" height={250} alt="..." />
       <div className="card-body ">
         <h5 className="card-title">{item.name}</h5>
-        <p className="card-text">{item.distance}m form Center</p>
+        <p className="card-tex m form Center">{item.distance}</p>
         <span className="siCancelOp">Free cancellation </span>
         <span className="siCancelOpSubtitle">
           You can cancel later, so lock in this great price today!

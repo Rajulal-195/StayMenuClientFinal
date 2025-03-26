@@ -10,7 +10,7 @@ function Carousel() {
             <div data-aos="zoom-in-up">
 
                 <div className="container-fluid p-0  back animated-div" >
-                    <div id="header-carousel" className="carousel slide " data-bs-ride="carousel">
+                    <div id="header-carousel" className="carousel slide " >
                         <div className="carousel-inner ">
                             <div className="carousel-item active  settle">
 
